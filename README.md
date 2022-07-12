@@ -120,3 +120,4 @@ response
   ]
 }
 ```
+more info https://developers.facebook.com/docs/instagram-api/reference/ig-media/insights
