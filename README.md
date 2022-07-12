@@ -32,7 +32,7 @@ def get_url(instagram_profile_id,instagram_token):
     return r.json()
 ```
 
-EXAMPLE OUTPUT
+response
 
 ```
 {
@@ -48,5 +48,75 @@ EXAMPLE OUTPUT
       'permalink': 'https://www.instagram.com/p/Cf6-fT0I4jHsds/'
     }
     
+}
+```
+
+# IG Media Insights
+
+you can use this function 
+
+```
+import requests
+
+def get_url(instagram_profile_id,instagram_token):
+    url = ""https://graph.facebook.com/v14.0/" + str(media_id) + "/insights?metric=impressions%2Cengagement%2Creach%2Csaved%2cvideo_views&access_token=" + str(instagram_token)
+    r = requests.get(url)
+    return r.json()
+```
+
+response
+
+```
+{
+  'data': [
+    {
+      'name': 'impressions',
+      'period': 'lifetime',
+      'values': [
+        {
+          'value': 13
+        }
+      ],
+      'title': 'Impressions',
+      'description': 'Total number of times the media object has been seen',
+      'id': '183063567072222/insights/impressions/lifetime'
+    },
+    {
+      'name': 'engagement',
+      'period': 'lifetime',
+      'values': [
+        {
+          'value': 5
+        }
+      ],
+      'title': 'Engagement',
+      'description': 'Total number of likes and comments on the media object',
+      'id': '183063567072222/insights/engagement/lifetime'
+    },
+    {
+      'name': 'reach',
+      'period': 'lifetime',
+      'values': [
+        {
+          'value': 12
+        }
+      ],
+      'title': 'Reach',
+      'description': 'Total number of unique accounts that have seen the media object',
+      'id': '183063567072222/insights/reach/lifetime'
+    },
+    {
+      'name': 'saved',
+      'period': 'lifetime',
+      'values': [
+        {
+          'value': 0
+        }
+      ],
+      'title': 'Saved',
+      'description': 'Total number of unique accounts that have saved the media object',
+      'id': '183063567072222/insights/saved/lifetime'
+    }
+  ]
 }
 ```
