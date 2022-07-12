@@ -21,7 +21,7 @@ more info https://developers.facebook.com/docs/instagram-api/getting-started
 
 # IG User Media
 
-you can use this function 
+you can use this function to retry the list of all media
 
 ```
 import requests
@@ -54,7 +54,7 @@ more info https://developers.facebook.com/docs/instagram-api/reference/ig-media
 
 # IG Media Insights
 
-you can use this function 
+you can use this function to retry the insights for each post via media_id
 
 ```
 import requests
