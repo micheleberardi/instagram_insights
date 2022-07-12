@@ -1,0 +1,8 @@
+import requests
+
+def get_url(instagram_profile_id,instagram_token):
+    url = "https://graph.facebook.com/v14.0/"+str(instagram_profile_id)+"/media?fields=id%2Ccaption%2Cis_comment_enabled%2Ccomments_count%2Clike_count%2Cmedia_type%2Cmedia_url%2Cpermalink&access_token="+str(instagram_token)
+    r = requests.get(url)
+    return r.json()
+    
+    
