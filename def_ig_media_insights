@@ -1,6 +1,6 @@
 import requests
 
-def get_url(instagram_profile_id,instagram_token):
-    url = ""https://graph.facebook.com/v14.1/" + str(media_id) + "/insights?metric=impressions%2Cengagement%2Creach%2Csaved%2cvideo_views&access_token=" + str(instagram_token)
+def get_url(instagram_media_id,instagram_token):
+    url = ""https://graph.facebook.com/v14.1/" + str(instagram_media_id) + "/insights?metric=impressions%2Cengagement%2Creach%2Csaved%2cvideo_views&access_token=" + str(instagram_token)
     r = requests.get(url)
     return r.json()
