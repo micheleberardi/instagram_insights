@@ -50,6 +50,7 @@ response
     
 }
 ```
+more info https://developers.facebook.com/docs/instagram-api/reference/ig-media
 
 # IG Media Insights
 
@@ -58,8 +59,8 @@ you can use this function
 ```
 import requests
 
-def get_url(instagram_profile_id,instagram_token):
-    url = ""https://graph.facebook.com/v14.0/" + str(media_id) + "/insights?metric=impressions%2Cengagement%2Creach%2Csaved%2cvideo_views&access_token=" + str(instagram_token)
+def get_url(instagram_media_id,instagram_token):
+    url = ""https://graph.facebook.com/v14.0/" + str(instagram_media_id) + "/insights?metric=impressions%2Cengagement%2Creach%2Csaved%2cvideo_views&access_token=" + str(instagram_token)
     r = requests.get(url)
     return r.json()
 ```
